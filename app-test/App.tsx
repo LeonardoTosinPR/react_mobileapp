@@ -4,23 +4,15 @@ import Header from "./src/components/Header";
 import Footer from "./src/components/Footer";
 import Content from "./src/components/Content";
 import Post from "./src/components/post";
+import React from "react";
+import PasswordReset from "./src/components/PasswordReset";
 
 
 export default function App() {
-  let car = {
-        name: ["fusca","nivus", "polo", "sedan"],
-        brand:"VW",
-        Hp: [150, 180, 150, 200]
-    }
   return <View style ={styles.container}>
     <Header />
-    <Content />
-    <Post author="@fulano" content="post 1" />
-    <Post author="@ciclano" content="post 2"/>
-    <Post author="@beltrano" content="post 3"/>
-    <Post author="@prof.Andres" content="post 4"/>
-    <Footer />
-  </View> 
+      <PasswordReset/>
+    </View> 
  
 }
 
@@ -31,4 +23,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  post: {
+    flex: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  }
 });
